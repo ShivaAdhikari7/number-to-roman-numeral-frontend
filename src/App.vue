@@ -1,17 +1,14 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <number-form />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NumberForm from "./components/NumberForm";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NumberForm
   }
 }
 </script>
