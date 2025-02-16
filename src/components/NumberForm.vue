@@ -11,7 +11,7 @@
         <div v-if="loading">Loading...</div>
         <div v-if="!loading && romanNumeral" class="roman-numeral-container">Roman Numeral for {{ number }} is
             <strong>{{ romanNumeral
-                }}</strong>
+            }}</strong>
         </div>
     </div>
 </template>
@@ -38,7 +38,7 @@ export default {
 
                 this.loading = true;
                 const num = Number(this.number);
-                const response = await fetch(`${endPointUrl}/convert-to-roman?number=${num}`);
+                const response = await fetch(`${endPointUrl}convert-to-roman?number=${num}`);
                 const data = await response.json();
 
                 this.romanNumeral = data.romanNumeral;
