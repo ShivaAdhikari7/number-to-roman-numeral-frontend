@@ -9,7 +9,7 @@
             </div>
         </form>
         <div v-if="loading">Loading...</div>
-        <div v-if="!loading && romanNumeral" class="roman-numeral-container">Roman Numeral for {{ number }} is
+        <div v-if="!loading && romanNumeral" class="roman-numeral-container">Roman Numeral for {{ enteredNumber }} is
             <strong>{{ romanNumeral
             }}</strong>
         </div>
@@ -23,6 +23,7 @@ export default {
             number: '',
             romanNumeral: '',
             loading: false,
+            enteredNumber: ''
         }
     },
     methods: {
@@ -42,6 +43,7 @@ export default {
                 const data = await response.json();
 
                 this.romanNumeral = data.romanNumeral;
+                this.enteredNumber = this.number
                 this.number = "";
             } catch (err) {
                 console.error(err);
